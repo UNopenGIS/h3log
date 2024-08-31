@@ -1,0 +1,6 @@
+*.geojsons
+*.geojson
+*.mdb
+*.h3j
+*.h3t
+*.pmtiles
