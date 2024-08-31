@@ -10,21 +10,15 @@ const map = new maplibregl.Map({
 })
 
 map.on('load', e => {
-  map.addH3JSource(
-    'h3log',
-    {
-      data: 'h3log.h3j',
-      attribution: "UN Smart Maps Group"
-    }
-  ).then(m => m.addLayer({
-    "id": 'h3log',
-    "type": 'line',
-    "source": 'h3log',
-    'paint': {
+  map.addH3JSource( 'h3log', {
+    data: 'h3log.h3j', attribution: "UN Smart Maps Group"
+  }).then(m => m.addLayer({
+    id: 'h3log', type: 'line', source: 'h3log',
+    paint: {
       'line-color': 'rgb(0, 255, 0)',
       'line-width': 2,
       'line-blur': 2
     }
   })
-  )
-})
+)})
+
