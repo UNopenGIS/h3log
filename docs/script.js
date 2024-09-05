@@ -1,4 +1,4 @@
-import 'https://unpkg.com/maplibre-gl/dist/maplibre-gl.js'
+import './maplibre-gl.js'
 import './h3j_h3t.js'
 
 let protocol = new pmtiles.Protocol()
@@ -7,7 +7,6 @@ maplibregl.addProtocol('pmtiles', protocol.tile)
 const map = new maplibregl.Map({
   container: 'map',
   style: 'style.json',
-  //style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
   center: [139.75728, 35.69025],
   zoom: 12.24, hash: true, localIdeographFontFamily: 
   '"HiraginoSans-W6", "Hiragino Sans W6", "Hiragino Sans", "HGP創英角ｺﾞｼｯｸUB", "Meiryo", "sans900", sans-serif'

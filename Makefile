@@ -32,6 +32,11 @@ sprite:
 	curl -o docs/sprite.png https://openmaptiles.github.io/positron-gl-style/sprite.png
 	curl -o docs/sprite@2x.png https://openmaptiles.github.io/positron-gl-style/sprite@2x.png
 
+library:
+	curl -L -o docs/maplibre-gl.css https://unpkg.com/maplibre-gl/dist/maplibre-gl.css
+	curl -L -o docs/maplibre-gl.js https://unpkg.com/maplibre-gl/dist/maplibre-gl.js
+	curl -L -o docs/pmtiles.js https://unpkg.com/pmtiles/dist/pmtiles.js
+
 ubx:
 	ubxtool -d BINARY
 	ubxtool -e NMEA
