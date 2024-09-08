@@ -26,6 +26,12 @@ docs/planet.pmtiles:
 docs/gel.pmtiles:
 	curl -o docs/gel.pmtiles -C - https://data.source.coop/smartmaps/gel/gel.pmtiles
 
+docs/terrain22.pmtiles:
+	curl -o docs/terrain22.pmtiles -C - https://data.source.coop/smartmaps/foil4gr1/terrain22.pmtiles
+
+docs/kpop.pmtiles:
+	curl -o docs/kpop.pmtiles -C - https://data.source.coop/smartmaps/foil4gr1/kpop.pmtiles
+
 sprite:
 	curl -o docs/sprite.json https://openmaptiles.github.io/positron-gl-style/sprite.json
 	curl -o docs/sprite@2x.json https://openmaptiles.github.io/positron-gl-style/sprite@2x.json

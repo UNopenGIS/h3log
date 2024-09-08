@@ -6,11 +6,16 @@ maplibregl.addProtocol('pmtiles', protocol.tile)
 
 const map = new maplibregl.Map({
   container: 'map',
-  style: 'style.json',
+  style: 'style.json', maxPitch: 85, 
   center: [139.75728, 35.69025],
   zoom: 12.24, hash: true, localIdeographFontFamily: 
   '"HiraginoSans-W6", "Hiragino Sans W6", "Hiragino Sans", "HGP創英角ｺﾞｼｯｸUB", "Meiryo", "sans900", sans-serif'
 })
+map.addControl(new maplibregl.FullscreenControl())
+map.addControl(new maplibregl.NavigationControl())
+map.addControl(new maplibregl.TerrainControl({ "source": "gel-raster-dem" }))
+map.addControl(new maplibregl.ScaleControl({ "unit": "metric" }))
+map.addControl(new maplibregl.GeolocateControl())
 
 map.on('load', e => {
   map.addH3JSource('h3log_pg', {
