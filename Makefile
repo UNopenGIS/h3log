@@ -17,7 +17,8 @@ dump:
 	DB=$(DB) ruby to_geojsons.rb
 
 serve:
-	busybox httpd -f -p 8000 -h docs
+	sudo caddy run
+	#busybox httpd -f -p 8000 -h docs
 	#ruby -run -e httpd docs -p 8000 # Seems no support for Range Request
 
 docs/planet.pmtiles: 

@@ -1,0 +1,11 @@
+portable.local {
+	root * /home/local/h3log/docs
+	file_server
+	encode gzip
+	header {
+		Access-Control-Allow-Origin "*"
+		Access-Control-Allow-Methods "GET, POST, OPTIONS"
+		Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"
+	}
+	tls internal
+}
