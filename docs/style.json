@@ -37,6 +37,9 @@
   },
   "sprite": "sprite",
   "glyphs": "./librefranklin/{fontstack}/{range}.pbf",
+  "terrain": {
+    "source": "gel-raster-terrain"
+  },
   "layers": [
     {
       "id": "background",
@@ -231,7 +234,7 @@
     {
       "id": "hills",
       "type": "hillshade",
-      "source": "gel-raster-dem",
+      "source": "gel-raster-terrain",
       "paint": {
         "hillshade-shadow-color": "#473B24"
       }

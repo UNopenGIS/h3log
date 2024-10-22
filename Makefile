@@ -43,6 +43,8 @@ library:
 	curl -L -o docs/maplibre-gl.css https://unpkg.com/maplibre-gl/dist/maplibre-gl.css
 	curl -L -o docs/maplibre-gl.js https://unpkg.com/maplibre-gl/dist/maplibre-gl.js
 	curl -L -o docs/pmtiles.js https://unpkg.com/pmtiles/dist/pmtiles.js
+	curl -L -o docs/deck-gl.js https://unpkg.com/deck.gl@latest/dist.min.js
+	curl -L -o docs/3d-tiles.js https://unpkg.com/@loaders.gl/3d-tiles@4.3.1/dist/dist.min.js
 
 ubx:
 	ubxtool -d BINARY

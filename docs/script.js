@@ -1,14 +1,32 @@
 import './maplibre-gl.js'
 import './h3j_h3t.js'
+import './deck-gl.js'
+import './3d-tiles.js'
 
 let protocol = new pmtiles.Protocol()
 maplibregl.addProtocol('pmtiles', protocol.tile)
 
+const overlay = new deck.MapboxOverlay({
+  interleaved: true,
+  layers: [
+    new deck.Tile3DLayer({
+      id: 'tile3dlayer',
+      pointSize: 1.6,
+      data: 'https://portable.local/ngs/tileset.json',
+      loader: loaders.Tiles3DLoader,
+      beforeID: 'place_other'
+    })
+  ]
+})
+
 const map = new maplibregl.Map({
   container: 'map',
   style: 'style.json', maxPitch: 85, 
-  center: [139.75728, 35.69025],
-  zoom: 12.24, hash: true, localIdeographFontFamily: 
+  // center: [139.75728, 35.69025],
+  center: [115.74614, -32.05799],
+  // zoom: 12.24,
+  zoom: 14.7, 
+  hash: true, localIdeographFontFamily: 
   '"HiraginoSans-W6", "Hiragino Sans W6", "Hiragino Sans", "HGP創英角ｺﾞｼｯｸUB", "Meiryo", "sans900", sans-serif'
 })
 map.addControl(new maplibregl.FullscreenControl())
@@ -66,5 +84,6 @@ map.on('load', e => {
       ]
     }
   }))
+  map.addControl(overlay)
 })
 
